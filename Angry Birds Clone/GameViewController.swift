@@ -26,8 +26,6 @@ class GameViewController: UIViewController {
             }
             
             view.ignoresSiblingOrder = true
-            
-            view.showsPhysics = true
         }
     }
 
