@@ -170,5 +170,13 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if bird.physicsBody!.velocity.dx <= 0.1 && bird.physicsBody!.velocity.dy <= 0.1 && bird.physicsBody!.angularVelocity <= 0.1 && gameStarted == true {
+            bird.physicsBody?.affectedByGravity = false
+            bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            bird.physicsBody?.angularVelocity = 0
+            bird.zPosition = 1
+            bird.position = originalPosition!
+            gameStarted = false
+        }
     }
 }
