@@ -29,6 +29,7 @@ class GameScene: SKScene {
         
         //Physics Body
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        self.scene?.scaleMode = .aspectFit
         
         //Bird
         let birdTexture = SKTexture(imageNamed: "bird")
@@ -41,7 +42,7 @@ class GameScene: SKScene {
         
         //Box
         let boxTexture = SKTexture(imageNamed: "brick")
-        let size = CGSize(width: boxTexture.size().width / 5, height: boxTexture.size().height / 5)
+        let size = CGSize(width: boxTexture.size().width / 6, height: boxTexture.size().height / 6)
         
         box1 = childNode(withName: "box1") as! SKSpriteNode
         box1.physicsBody = SKPhysicsBody(rectangleOf: size)
