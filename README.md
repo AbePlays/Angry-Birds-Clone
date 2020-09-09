@@ -1,5 +1,7 @@
 # Angry Birds Clone
 
+## Screenshot
+
 ![Angry Bird Clone](home.png) 
 
 ## Overview
